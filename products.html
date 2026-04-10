@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Nigam Plywood House</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-header {
+            padding: 150px 20px 80px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+        }
+        .page-header h1 {
+            color: var(--secondary-color);
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .product-info {
+            padding: 25px;
+        }
+
+        .product-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .product-info p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .inquire-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .inquire-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Products List tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .tag {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--wood-brown);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Loader -->
+    <div id="global-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <h1>NIGAM PLYWOOD <span>HOUSE & VARIETY</span></h1>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="proprietor.html">Proprietor</a>
+            </nav>
+
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <h1>Our Premium Collection</h1>
+        <p>Explore our wide range of woodwork, doors, and modular setups.</p>
+    </div>
+
+    <!-- Products Section -->
+    <section class="section">
+        <div class="products-grid">
+            
+            <!-- Product 1 -->
+            <div class="product-card fade-up">
+                <img src="assets/plywood_stack.png" alt="Premium Plywood" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1598144670081-309192461b7f?auto=format&fit=crop&q=80'">
+                <div class="product-info">
+                    <div class="tags">
+                        <span class="tag">Plywood</span>
+                        <span class="tag">Mica</span>
+                    </div>
+                    <h3>Plywood & Mica</h3>
+                    <p>High-density, durable, and termite-resistant plywood sheets and elegant mica laminates for versatile interior applications.</p>
+                    <a href="https://wa.me/917384276745?text=Hello%20I%20am%20interested%20in%20Plywood%20and%20Mica" class="inquire-btn" target="_blank">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card fade-up" style="transition-delay: 0.1s;">
+                <img src="assets/wooden_door.png" alt="Designer Doors" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1606501172151-5100baec5b8c?auto=format&fit=crop&q=80'">
+                <div class="product-info">
+                    <div class="tags">
+                        <span class="tag">Flash Door</span>
+                        <span class="tag">PVC Door</span>
+                    </div>
+                    <h3>Architectural Doors</h3>
+                    <p>We provide beautifully crafted Flash Doors, Lamination Doors, Membrane Doors, and PVC doors tailored to your aesthetic requirements.</p>
+                    <a href="https://wa.me/917384276745?text=Hello%20I%20am%20interested%20in%20Doors" class="inquire-btn" target="_blank">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card fade-up" style="transition-delay: 0.2s;">
+                <img src="assets/modular_kitchen.png" alt="Modular Kitchen" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80'">
+                <div class="product-info">
+                    <div class="tags">
+                        <span class="tag">Interior</span>
+                        <span class="tag">Modular Kitchen</span>
+                    </div>
+                    <h3>Modular Kitchens</h3>
+                    <p>Custom-built modular kitchens equipped with modern fittings, optimal storage solutions, and sleek designs to elevate your cooking space.</p>
+                    <a href="https://wa.me/917384276745?text=Hello%20I%20am%20interested%20in%20Modular%20Kitchens" class="inquire-btn" target="_blank">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card fade-up" style="transition-delay: 0.3s;">
+                <img src="assets/hardware_fittings.png" alt="Hardware & Locks" class="product-img">
+                <div class="product-info">
+                    <div class="tags">
+                        <span class="tag">Hardware</span>
+                        <span class="tag">Drawer Channel</span>
+                        <span class="tag">Screws</span>
+                    </div>
+                    <h3>Hardware Fittings</h3>
+                    <p>Premium quality door locks, elegant door handles, heavy-duty drawer channels, screws, and accessories for a secure and smooth operation.</p>
+                    <a href="https://wa.me/917384276745?text=Hello%20I%20am%20interested%20in%20Hardware%20Fittings" class="inquire-btn" target="_blank">Inquire Now</a>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card fade-up" style="transition-delay: 0.4s;">
+                <img src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?auto=format&fit=crop&q=80" alt="Adhesives & Tapes" class="product-img">
+                <div class="product-info">
+                    <div class="tags">
+                        <span class="tag">Adhesives</span>
+                        <span class="tag">Fevicol</span>
+                        <span class="tag">Masking Tape</span>
+                    </div>
+                    <h3>Adhesives & Tapes</h3>
+                    <p>Strong and reliable Fevicol glue, masking tapes, and essential adhesives ensuring durable bonds and flawless finishing for all woodwork.</p>
+                    <a href="https://wa.me/917384276745?text=Hello%20I%20am%20interested%20in%20Adhesives%20and%20Tapes" class="inquire-btn" target="_blank">Inquire Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/917384276745" target="_blank" class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Nigam Plywood House & Variety</h3>
+                <p>Providing top-tier Plywood, Mica, Flash Doors, Lamination Doors, Membrane Doors, PVC Doors & Modular Kitchens.</p>
+                <div style="margin-top: 20px;">
+                    <p><i class="fa-solid fa-phone"></i> +91 7384276745</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7908506771</p>
+                </div>
+            </div>
+            
+            <div class="footer-col" style="justify-self: center;">
+                <h3>Quick Links</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="proprietor.html">Meet the Owner</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col map-container">
+                <h3>Our Location</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Eastern By-pass (Near Lokenath Mandir), Ghogomali, Siliguri-734006</p>
+                <iframe src="https://www.google.com/maps?q=Eastern+By-pass+Near+Lokenath+Mandir+Ghogomali+Siliguri&output=embed" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nigam Plywood House & Variety. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Designed by <a href="https://portfolio-chi-rosy-63.vercel.app/" target="_blank" style="color: var(--secondary-color); font-weight: 500;">Badhan Chowdhury</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

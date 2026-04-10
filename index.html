@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nigam Plywood House & Variety</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Inline hero specific style -->
+    <style>
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.7)), url('assets/hero_banner.png') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            color: var(--secondary-color);
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.3s backwards;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+            color: var(--primary-color);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid var(--secondary-color);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Loader -->
+    <div id="global-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <h1>NIGAM PLYWOOD <span>HOUSE & VARIETY</span></h1>
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <a href="proprietor.html">Proprietor</a>
+            </nav>
+
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Plywood & Interiors</h1>
+            <p>Elevating your living spaces with superior quality Plywood, Architectural Doors, and Modular Kitchens in
+                Siliguri.</p>
+            <a href="products.html" class="cta-btn">Explore Products</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <h2 class="section-title fade-up">Why Choose Us</h2>
+        <div class="features-grid">
+            <div class="feature-card fade-up" style="transition-delay: 0.1s;">
+                <i class="fa-solid fa-tree feature-icon"></i>
+                <h3>Premium Quality</h3>
+                <p>We source only the finest wood and materials to ensure durability and aesthetic excellence.</p>
+            </div>
+            <div class="feature-card fade-up" style="transition-delay: 0.2s;">
+                <i class="fa-solid fa-house-chimney feature-icon"></i>
+                <h3>Modern Designs</h3>
+                <p>From PVC Doors to custom Modular Kitchens, we offer contemporary designs that redefine your space.
+                </p>
+            </div>
+            <div class="feature-card fade-up" style="transition-delay: 0.3s;">
+                <i class="fa-solid fa-handshake feature-icon"></i>
+                <h3>Trusted Service</h3>
+                <p>Committed to delivering unparalleled customer satisfaction and expert guidance for all your needs.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/917384276745" target="_blank" class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Nigam Plywood House & Variety</h3>
+                <p>Providing top-tier Plywood, Mica, Flash Doors, Lamination Doors, Membrane Doors, PVC Doors & Modular
+                    Kitchens.</p>
+                <div style="margin-top: 20px;">
+                    <p><i class="fa-solid fa-phone"></i> +91 7384276745</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7908506771</p>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="proprietor.html">Meet the Owner</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col map-container">
+                <h3>Our Location</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Eastern By-pass (Near Lokenath Mandir), Ghogomali,
+                    Siliguri-734006</p>
+                <!-- Embed Google Map via query string -->
+                <iframe
+                    src="https://www.google.com/maps?q=Eastern+By-pass+Near+Lokenath+Mandir+Ghogomali+Siliguri&output=embed"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nigam Plywood House & Variety. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Designed by <a href="https://portfolio-chi-rosy-63.vercel.app/" target="_blank" style="color: var(--secondary-color); font-weight: 500;">Badhan Chowdhury</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

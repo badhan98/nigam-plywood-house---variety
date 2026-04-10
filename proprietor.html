@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proprietor | Nigam Plywood House</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪵</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .owner-section {
+            padding: 150px 20px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+        .owner-card {
+            display: flex;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .owner-img-container {
+            flex: 1;
+            background: linear-gradient(135deg, var(--primary-color), #1a365d);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            color: white;
+            position: relative;
+        }
+        
+        /* Decorative circle */
+        .owner-img-container::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 50%;
+        }
+
+        .owner-icon {
+            font-size: 8rem;
+            color: var(--secondary-color);
+            z-index: 1;
+        }
+
+        .owner-info {
+            flex: 1.5;
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .owner-role {
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+
+        .owner-name {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .owner-desc {
+            color: #555;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .contact-box {
+            background: var(--background-light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item i {
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .owner-card {
+                flex-direction: column;
+            }
+            .owner-img-container {
+                padding: 60px;
+            }
+            .owner-info {
+                padding: 40px 30px;
+            }
+            .owner-name {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Loader -->
+    <div id="global-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <h1>NIGAM PLYWOOD <span>HOUSE & VARIETY</span></h1>
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="proprietor.html" class="active">Proprietor</a>
+            </nav>
+
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Owner Section -->
+    <section class="owner-section">
+        <div class="owner-card fade-up">
+            <div class="owner-img-container">
+                <img src="assets/proprietor.jpg" alt="Bidhan Saha" class="owner-image" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80'" style="width: 280px; height: 280px; object-fit: cover; border-radius: 50%; z-index: 1; border: 5px solid rgba(212, 175, 55, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            </div>
+            <div class="owner-info">
+                <p class="owner-role">Proprietor</p>
+                <h1 class="owner-name">Bidhan Saha</h1>
+                <p class="owner-desc">
+                    As the driving force behind Nigam Plywood House & Variety, Bidhan Saha brings years of expertise in high-quality woodwork and modern interior solutions. Dedicated to delivering excellence, we ensure that every customer in Siliguri finds exactly what they need to build their dream spaces.
+                </p>
+                
+                <div class="contact-box">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>+91 7384276745</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>+91 7908506771</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span style="font-size: 1rem;">Eastern By-pass (Near Lokenath Mandir), Ghogomali, Siliguri-734006</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/917384276745" target="_blank" class="whatsapp-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>Nigam Plywood House & Variety</h3>
+                <p>Providing top-tier Plywood, Mica, Flash Doors, Lamination Doors, Membrane Doors, PVC Doors & Modular Kitchens.</p>
+                <div style="margin-top: 20px;">
+                    <p><i class="fa-solid fa-phone"></i> +91 7384276745</p>
+                    <p><i class="fa-solid fa-phone"></i> +91 7908506771</p>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul style="line-height: 2;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+                    <li><a href="proprietor.html">Meet the Owner</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col map-container">
+                <h3>Our Location</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Eastern By-pass (Near Lokenath Mandir), Ghogomali, Siliguri-734006</p>
+                <iframe src="https://www.google.com/maps?q=Eastern+By-pass+Near+Lokenath+Mandir+Ghogomali+Siliguri&output=embed" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nigam Plywood House & Variety. All Rights Reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Designed by <a href="https://portfolio-chi-rosy-63.vercel.app/" target="_blank" style="color: var(--secondary-color); font-weight: 500;">Badhan Chowdhury</a></p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

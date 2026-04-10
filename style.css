@@ -1,0 +1,314 @@
+:root {
+  --primary-color: #0A192F;
+  --secondary-color: #D4AF37;
+  --accent-color: #FF5722;
+  --text-dark: #333333;
+  --text-light: #F4F5F7;
+  --background-light: #FAFAFA;
+  --wood-brown: #8B5A2B;
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-speed);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Page Loader */
+#global-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-color);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+}
+
+.loader-spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--secondary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+#global-loader h2 {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+body.loaded #global-loader {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Header & Navigation */
+header {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color var(--transition-speed), padding var(--transition-speed), box-shadow var(--transition-speed);
+  padding: 20px 0;
+}
+
+header.scrolled {
+  background-color: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo h1 {
+  color: var(--secondary-color);
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.logo span {
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondary-color);
+  bottom: -5px;
+  left: 0;
+  transition: width var(--transition-speed);
+}
+
+.nav-links a:hover::after, .nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--secondary-color);
+}
+
+.mobile-menu-btn {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Sticky WhatsApp Button */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 100;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+}
+
+.whatsapp-btn.visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1) translateY(0);
+  background-color: #20BA56;
+}
+
+/* Sections */
+.section {
+  padding: 100px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 60px 20px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col h3 {
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.footer-col p {
+  margin-bottom: 15px;
+  color: #ccc;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-col i {
+  color: var(--secondary-color);
+  margin-top: 5px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  border-radius: 8px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: #888;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    padding: 80px 30px;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+    z-index: 1001;
+  }
+
+  header {
+    background-color: rgba(10, 25, 47, 0.95);
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
